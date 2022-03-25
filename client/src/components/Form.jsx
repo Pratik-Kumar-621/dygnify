@@ -38,7 +38,7 @@ export const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(postLoanData(formData));
-    console.log(formData);
+    // console.log(formData);
     setFormView("1");
     clear();
   };

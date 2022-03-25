@@ -1,10 +1,15 @@
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
 
 export const Loan = () => {
-  const data = useSelector((state) => state.loan);
+  const data = useSelector((state) => state);
+  useEffect(() => {
+    console.log("InitData", data);
+  }, [data]);
   return (
     <div className="loan-list">
-      {data.data?.map((loan) => {
+      {data?.loan?.map?.((loan) => {
+        // loan = loan.data;
         return (
           <div className="indiv-loan" key={loan._id}>
             <div className="name-line">
