@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/dygnify/static/css/main.bc5618e0.css",
+    "main.js": "/dygnify/static/js/main.58e17f11.js",
+    "index.html": "/dygnify/index.html",
+    "main.bc5618e0.css.map": "/dygnify/static/css/main.bc5618e0.css.map",
+    "main.58e17f11.js.map": "/dygnify/static/js/main.58e17f11.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bc5618e0.css",
+    "static/js/main.58e17f11.js"
+  ]
+}
