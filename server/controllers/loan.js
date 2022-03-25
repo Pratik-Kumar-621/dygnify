@@ -19,8 +19,8 @@ export const postLoanData = async (req, res) => {
   const loanData = req.body;
   const newLoanData = new LoanModel(loanData);
   try {
-    await newLoanData.save();
-    res.status(201).json(loanData);
+    const savedData = await newLoanData.save();
+    res.status(201).json(savedData);
   } catch (error) {
     res.status(500).json({
       status: "error",
