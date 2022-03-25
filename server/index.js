@@ -11,9 +11,12 @@ app.use(bodyParser.json({ limit: "50mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.send("Dygnify API");
+});
 app.use("/api/loan", loanRoutes);
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 
 mongoose
   .connect(process.env.MONGO_URI, {
