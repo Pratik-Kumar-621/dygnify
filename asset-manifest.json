@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/dygnify/static/css/main.cc539f8c.css",
+    "main.css": "/dygnify/static/css/main.cf7a18bb.css",
     "main.js": "/dygnify/static/js/main.16d4d9b5.js",
     "index.html": "/dygnify/index.html",
-    "main.cc539f8c.css.map": "/dygnify/static/css/main.cc539f8c.css.map",
+    "main.cf7a18bb.css.map": "/dygnify/static/css/main.cf7a18bb.css.map",
     "main.16d4d9b5.js.map": "/dygnify/static/js/main.16d4d9b5.js.map"
   },
   "entrypoints": [
-    "static/css/main.cc539f8c.css",
+    "static/css/main.cf7a18bb.css",
     "static/js/main.16d4d9b5.js"
   ]
 }
