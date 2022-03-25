@@ -1,0 +1,124 @@
+.App {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: auto 500px;
+  grid-template-rows: auto auto;
+  background-color: #f8f8f8;
+  .loan-list-section {
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    margin: 50px 80px 0 80px;
+    .heading {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 40px;
+      text-align: left;
+      color: rgb(97, 97, 216);
+    }
+    .loan-list {
+      display: grid;
+      grid-gap: 50px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      .indiv-loan {
+        background-color: #fff;
+        border-radius: 7px;
+        padding: 30px 40px;
+        .name-line {
+          display: flex;
+          font-size: 21px;
+        }
+        > div {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .loan-form {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    position: sticky;
+    top: 0;
+    .form-body {
+      border-radius: 7px;
+      box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2);
+      .heading {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-align: center;
+        color: rgb(97, 97, 216);
+      }
+      margin: 50px 80px 0 40px;
+      background-color: #fff;
+      padding: 30px;
+      .form-switch {
+        margin-bottom: 30px;
+        .form-switch-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .progress {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            width: 36px;
+            height: 36px;
+            background-color: #eee;
+            border-radius: 50%;
+          }
+          .success {
+            background-color: rgb(97, 97, 216);
+            font-weight: bold;
+            color: #fff;
+          }
+          .bar {
+            background-color: #eee;
+            width: 60px;
+            height: 7px;
+          }
+          .bar-success {
+            background-color: rgb(97, 97, 216);
+          }
+        }
+      }
+      .form-inputs {
+        form {
+          display: flex;
+          flex-direction: column;
+          .input {
+            display: grid;
+            label {
+              font-size: 14px;
+              font-weight: 700;
+              margin: 0 0 8px 0;
+              &::after {
+                position: absolute;
+                content: "*";
+                color: red;
+                padding-left: 4px;
+              }
+            }
+            input {
+              border: none;
+              border-bottom: 1px solid rgb(107, 104, 104);
+              padding: 5px 10px;
+              font-size: 16px;
+              margin-bottom: 12px;
+              &:focus {
+                background-color: #e8f0fe;
+                border-radius: 4px;
+                outline: none;
+                background-color: 2px solid black;
+              }
+            }
+          }
+          .primary {
+            margin: 20px 0;
+          }
+        }
+      }
+    }
+  }
+}
