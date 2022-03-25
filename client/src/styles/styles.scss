@@ -84,7 +84,8 @@
         }
       }
       .form-inputs {
-        form {
+        form,
+        .form-last-field {
           display: flex;
           flex-direction: column;
           .input {

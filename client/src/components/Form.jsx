@@ -38,6 +38,7 @@ export const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(postLoanData(formData));
+    console.log(formData);
     setFormView("1");
     clear();
   };
@@ -70,7 +71,7 @@ export const Form = () => {
           <div className={`progress ${formView === "3" && "success"}`}>3</div>
         </div>
       </div>
-      <form className="form-inputs">
+      <form onSubmit={handleSubmit} className="form-inputs">
         {formView === "1" && (
           <>
             <form>
@@ -178,7 +179,7 @@ export const Form = () => {
         )}
         {formView === "3" && (
           <>
-            <form>
+            <div className="form-last-field">
               <Input
                 label="Loan Amount (in Rs.)"
                 name="loanAmount"
@@ -209,12 +210,6 @@ export const Form = () => {
                 type="submit"
                 variant="contained"
                 color="primary"
-                onClick={
-                  FormData.loanAmount &&
-                  FormData.loanTenure &&
-                  formData.intrestRate &&
-                  handleSubmit
-                }
                 text="Submit"
               />
               <Buttons
@@ -225,7 +220,7 @@ export const Form = () => {
                 }}
                 text="Back"
               />
-            </form>
+            </div>
           </>
         )}
       </form>
